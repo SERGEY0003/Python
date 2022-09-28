@@ -1,0 +1,27 @@
+Дан произвольный текст. Напечатайте все имеющиеся в нем цифры, определите их количество, сумму и найти максимальное.
+
+text = input('Введите текст')
+TEXT ="lakjsdrg w9843 hp2wqhf3 2q3fjhq[mwf, C'"
+print(text)
+cifr =''
+for i in text:
+    if i.isdigit():
+        cifr = cifr+i
+print('все цифры из текста-',cifr)
+print('в тексте',len(cifr), 'цифр')
+sum = 0
+for c in cifr:
+    sum = sum+int(c)
+print('Сумма цифр в тексте =',sum)
+print('Максимальное число в тексте = ',max(cifr))
+
+
+ls =list(range(1,6,1))
+for i in ls:
+    lst = list(range(1, 6, 1))
+    print(i,lst)
+
+from random import randint
+ls =list(range(1,6,1))
+for i in ls:
+    print(list(randint(1,5)))
