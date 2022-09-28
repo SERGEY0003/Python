@@ -1,0 +1,15 @@
+Создайте матрицу (список из вложенных списков) размера N x M (фиксируются в программе), заполненную случайными целыми числами.
+
+from random import randint
+i =0
+j=0
+sp1= []
+while j<6:
+    while i<5:
+        r =randint(1,9)
+        sp1.append(r)
+        i+=1
+    print(sp1)
+    i=0
+    sp1.clear()
+    j+=1
