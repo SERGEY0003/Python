@@ -1,0 +1,33 @@
+
+L = 'Мой , самых честных правил, Когда не в шутку занемог, Он уважать себя заставил И лучше выдумать не мог'
+i = 0
+slovo =''
+a =[]
+l = len(L)-1
+while i<=l:
+        while  L[i]!=' ' and L[i]!=',' :
+             slovo =slovo+L[i]
+             i+=1
+             if i>l: break
+        a.append(slovo)
+        slovo=' '
+        i+=1
+
+i =0
+while i<len(a):
+    if a[i] == ' ':
+        a.remove(a[i])
+    i+=1
+
+print(L)
+i =0
+count = 0
+
+dl_slovo = len(a[i])
+
+while i<len(a):
+    if dl_slovo<len(a[i]):
+        dl_slovo=len(a[i])
+        count= i
+    i+=1
+print('Самое длинное первое слово в тексте №',count+1)
