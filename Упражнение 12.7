@@ -1,0 +1,33 @@
+L = 'Мой дядя, самых честных правил, Когда не в шутку занемог, Он уважать себя заставил И лучше выдумать не мог'
+i = 0
+slovo =''
+a =[]
+l = len(L)-1
+while i<=l:
+        while  L[i]!=' ' and L[i]!=',' :
+             slovo =slovo+L[i]
+             i+=1
+             if i>l: break
+        a.append(slovo)
+        slovo=' '
+        i+=1
+
+i =0
+while i<len(a):
+    if a[i] == ' ':
+        a.remove(a[i])
+    i+=1
+
+i =0
+sim_i=0
+while i<len(a):
+    element = a[i]
+    simbol = element[sim_i]
+    if simbol == ' ':
+        simbol = element[sim_i+1]
+    if simbol == 'м' or simbol== 'М':
+        a.remove(a[i])
+
+        i-=1
+    i+=1
+print(''.join(a))
